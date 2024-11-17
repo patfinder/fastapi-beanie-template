@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = "A FastAPI template with beanie, jwt"
+authors = ["Le Vuong Nguyen <vuong.se@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+beanie = "^1.27.0"
+fastapi = "^0.115.5"
+fastapi-jwt = "^0.3.0"
+fastapi-mail = "^1.4.1"
+python-decouple = "^3.8"
+uvicorn = "^0.32.0"
+bcrypt = "^4.2.0"
+authlib = "^1.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.13.0"
+ruff = "^0.7.4"
+httpx = "^0.27.2"
+pytest-asyncio = "^0.24.0"
+asgi-lifespan = "^2.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
