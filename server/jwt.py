@@ -30,5 +30,5 @@ async def user_from_credentials(auth: JwtAuthorizationCredentials) -> User | Non
 
 async def user_from_token(token: str) -> User | None:
     """Return the user associated with a token value."""
-    payload = access_security(token)
+    payload = access_security.jwt_backend.decode(token, access_security.secret_key)
     return await User.by_email(payload["subject"]["username"])
